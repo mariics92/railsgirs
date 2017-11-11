@@ -1,9 +1,11 @@
-<p id="notice"><%= notice %></p>
-<div style="text-align: right">
-<%= link_to 'Novo Usuário', new_usuario_path %>
+
+<div style="text-align: right; background: #4682b4; height: 50px">
+  <br>
+<%= link_to 'Novo Usuário', new_usuario_path, class: 'css_class', style: 'color:#FFFFFF' %>
 &nbsp;&nbsp;&nbsp;
-<%= link_to 'Nova Ocorrência', new_ocorrencium_path %>
+<%= link_to 'Nova Ocorrência', new_ocorrencium_path, class: 'css_class', style: 'color:#FFFFFF' %>
 </div>
+<br>
 <center><img src="https://pbs.twimg.com/media/DOXsXnhXkAE-O1S.jpg" alt="Logo HelpPets"></center>
 <br>
 <br>
@@ -19,9 +21,9 @@
 <br>  
   <%= ocorrencium.descricao %>
   <br>
-  <%= ocorrencium.data %>
+   <%= ocorrencium.localizacao %>
   <br>
-  <%= ocorrencium.localizacao %>
+  <%= ocorrencium.data %>
   <br>
   <%= link_to 'Exibir', ocorrencium %>
   <%= link_to 'Editar', edit_ocorrencium_path(ocorrencium) %>
@@ -33,4 +35,10 @@
 <% end %>
 </div>
 <br>
+<div style= "text-align: center; background: #4682b4; height: 180px">
+  <br>
+<h2><font style="color:white"> Feito com <3 no Rails Gils BH 2017</font></h2>
+  <p><font style="color:white">Por Lorrany, Mariane, Marina, Priscila e Sandra.</font></p>
+ <font style="color:white"><p>Tutoras: Edlaine e Nadja. </font></p>
+</div>
 
