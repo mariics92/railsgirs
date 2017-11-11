@@ -1,0 +1,2 @@
+class Ocorrencium < ApplicationRecord
+end
