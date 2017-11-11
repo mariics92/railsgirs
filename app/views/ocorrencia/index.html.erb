@@ -1,15 +1,21 @@
 <p id="notice"><%= notice %></p>
-<%= link_to 'Novo Usuario', new_usuario_path %>
+<div style="text-align: right">
+<%= link_to 'Novo Usuário', new_usuario_path %>
+&nbsp;&nbsp;&nbsp;
+<%= link_to 'Nova Ocorrência', new_ocorrencium_path %>
+</div>
 <center><img src="https://pbs.twimg.com/media/DOXsXnhXkAE-O1S.jpg" alt="Logo HelpPets"></center>
 <br>
 <br>
 <br>
+<div style="text-align: center">
 <h1>Ocorrências</h1>
+  <p> Encontrou um pet abandonado ou em situação de risco? Cadastre-se no site e registre sua ocorrência. </p>
 <br>
 
 <% @ocorrencia.each do |ocorrencium| %>
 <div>
-  <%= image_tag(ocorrencium.foto, size:"200x170", :alt => "Dog na bad") %>
+  <%= image_tag(ocorrencium.foto, size:"500x370", :alt => "Dog na bad") %>
 <br>  
   <%= ocorrencium.descricao %>
   <br>
@@ -25,7 +31,6 @@
  <br>
 </div>
 <% end %>
-
+</div>
 <br>
 
-<%= link_to 'Nova Ocorrencia', new_ocorrencium_path %>
