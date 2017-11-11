@@ -1,35 +1,30 @@
 <p id="notice"><%= notice %></p>
+<%= link_to 'Novo Usuario', new_usuario_path %>
+<center><img src="https://pbs.twimg.com/media/DOXsXnhXkAE-O1S.jpg" alt="Logo HelpPets"></center>
+<br>
+<br>
+<br>
+<h1>Ocorrências</h1>
+<br>
 
-<h1>Ocorrencia</h1>
-<img src="helppets.png" alt="Smiley face" height="200" width="280">
-<br>
-<br>
-<br>
-<table>
-  <thead>
-    <tr>
-      <th>Foto</th>
-      <th>Descricao</th>
-      <th>Data</th>
-      <th>Localizacao</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @ocorrencia.each do |ocorrencium| %>
-      <tr>
-        <td><%= ocorrencium.foto %></td>
-        <td><%= ocorrencium.descricao %></td>
-        <td><%= ocorrencium.data %></td>
-        <td><%= ocorrencium.localizacao %></td>
-        <td><%= link_to 'Exibir', ocorrencium %></td>
-        <td><%= link_to 'Editar', edit_ocorrencium_path(ocorrencium) %></td>
-        <td><%= link_to 'Excluir', ocorrencium, method: :delete, data: { confirm: 'Tem certeza?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<% @ocorrencia.each do |ocorrencium| %>
+<div>
+  <%= image_tag(ocorrencium.foto, size:"200x170", :alt => "Dog na bad") %>
+<br>  
+  <%= ocorrencium.descricao %>
+  <br>
+  <%= ocorrencium.data %>
+  <br>
+  <%= ocorrencium.localizacao %>
+  <br>
+  <%= link_to 'Exibir', ocorrencium %>
+  <%= link_to 'Editar', edit_ocorrencium_path(ocorrencium) %>
+  <%= link_to 'Excluir', ocorrencium, method: :delete, data: { confirm: 'Tem certeza?' } %>
+ <br> 
+ <br>
+ <br>
+</div>
+<% end %>
 
 <br>
 
